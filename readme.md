@@ -73,7 +73,7 @@ Click Open and log in with root access.
 Once logged in, execute the following commands:
 
 For 2022 Bootloader:
-
+   ```bash
 nvram set ssh_en=1
 nvram set uart_en=1
 nvram set boot_wait=on
@@ -88,7 +88,7 @@ nvram commit
 reboot
 
 ## For New Bootloader:
-
+   ```bash
 nvram set boot_fw1="run boot_rd_img;bootm"
 nvram set flag_try_sys1_failed=8
 nvram set flag_try_sys2_failed=8
