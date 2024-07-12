@@ -38,6 +38,7 @@ Before proceeding, ensure that your device has Telnet enabled. If Telnet is not 
    ```bash
    git clone https://github.com/c0m1-dev/XiaomiRouterPatcher.git
    cd XiaomiRouterPatcher
+   ```
 
 Run the Python Script to gain root access.
 
@@ -45,29 +46,29 @@ Run the Python Script to gain root access.
 After enabling Telnet, follow these steps to connect using WinSCP.
 
 ## WinSCP Setup
-Open WinSCP and configure the connection settings:
+1. Open WinSCP and configure the connection settings:
 
-File Protocol: SCP
-Hostname: 192.168.31.1
-SSH Port: 22 (leave as default)
-Username: root
-Password: root (or your chosen password)
-Login to the router.
+- File Protocol: SCP
+- Hostname: 192.168.31.1
+- SSH Port: 22 (leave as default)
+- Username: root
+- Password: root (or your chosen password)
+- Login to the router.
 
 ## Uploading OpenWRT Firmware
 
-Once connected, navigate to the /tmp folder.
-Drag and drop the OpenWRT firmware file: openwrt-23.05.3-mediatek-mt7622-xiaomi_redmi-router-ax6s-squashfs-factory.bin
-Save and close WinSCP.
+- Once connected, navigate to the /tmp folder.
+- Drag and drop the OpenWRT firmware file: openwrt-23.05.3-mediatek-mt7622-xiaomi_redmi-router-ax6s-squashfs-factory.bin
+- Save and close WinSCP.
 
 ## Connecting via PuTTY
-Download and Install PuTTY from putty.org.
+1. Download and Install PuTTY from putty.org.
 
-Open PuTTY and enter the following:
+2. Open PuTTY and enter the following:
 
-Host Name (or IP address): 192.168.31.1
-Port: 22 (leave as default)
-Click Open and log in with root access.
+- Host Name (or IP address): 192.168.31.1
+- Port: 22 (leave as default)
+- Click Open and log in with root access.
 
 ## Running Commands
 Once logged in, execute the following commands:
@@ -86,6 +87,7 @@ mtd -r write openwrt-23.05.3-mediatek-mt7622-xiaomi_redmi-router-ax6s-squashfs-f
 nvram set flag_ota_reboot=1
 nvram commit
 reboot
+```
 
 ## For New Bootloader:
    ```bash
@@ -101,6 +103,7 @@ mtd -r write openwrt-23.05.3-mediatek-mt7622-xiaomi_redmi-router-ax6s-squashfs-f
 nvram set flag_ota_reboot=1
 nvram commit
 reboot
+```
 
 ## Accessing the Router
 After the router reboots, you can access it via:
